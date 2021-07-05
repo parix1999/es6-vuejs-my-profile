@@ -40,6 +40,12 @@ new Vue(
                 });
                 this.inputStatus = ''; 
             },
+            deleteStatus:function(index) {
+            
+                let remove = this.myProfile.posts.splice(index, 1);
+                return remove;
+                
+            },
         },
     }
 );
