@@ -69,4 +69,18 @@ data.myProfile.posts.forEach((post) => {
     // e il tutto dentro postListHtml.innerHtml.
 
     postListHtml.innerHTML += `<div class="post"> ${postHtml} </div>`
-}) 
+});
+
+function inputUtente() {
+    var inputHtml = document.getElementById('myInput').value;
+    console.log(inputHtml);
+
+    var add = data.myProfile.posts.push({
+        text:inputHtml,
+        date: '4-07-2021',
+    });
+    console.log(data.myProfile.posts);
+
+}
+
+
