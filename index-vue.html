@@ -24,8 +24,8 @@
         </div>
 
         <div class="new-post">
-            <textarea placeholder="A cosa stai pensando?"></textarea>
-            <button class="send">CREA</button>
+            <textarea @keyup.enter="sendStatus" v-model="inputStatus" placeholder="A cosa stai pensando?"></textarea>
+            <button @click="sendStatus" class="send">CREA</button>
         </div>
 
         <div class="post-list">

@@ -4,6 +4,7 @@ new Vue(
     {
         el: '#profile-page',
         data: {
+            inputStatus: '', 
             myProfile: {
                 details: {
                     name: 'Pierfilippo',
@@ -30,6 +31,15 @@ new Vue(
                     }
                 ]
             }
+        },
+        methods:{
+            sendStatus:function(){
+                this.myProfile.posts.push({
+                    text:this.inputStatus,
+                    date: '5-07-2021',
+                });
+                this.inputStatus = ''; 
+            },
         },
     }
 );
