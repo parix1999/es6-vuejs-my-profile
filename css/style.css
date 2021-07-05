@@ -78,6 +78,12 @@
 .post-details {
     display: flex;
     align-items: center;
+    justify-content: space-between;
+}
+
+.post-details .icons-cross{
+    flex-grow: 1;
+    text-align: right;
 }
 
 .post-details .user-pic{

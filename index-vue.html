@@ -4,12 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Social Profile</title>
+    <title>My Social Profile VueJs</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
-
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+    
     <link rel="stylesheet" href="css/style.css">
 
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
@@ -31,13 +32,16 @@
         <div class="post-list">
 
             <div v-for = 'post in myProfile.posts' class="post">
-                <div class="post-details">
+                <div class="post-details"> <!-- aggiungere qui l'icona -->
                     <div class="user-pic">
                         <img :src="myProfile.details.pic" alt="user pic">
                     </div>
                     <div class="details">
                         <div class="user-name">{{myProfile.details.name}} {{myProfile.details.surname}}</div>
                         <div class="post-date">{{post.date}}</div>
+                    </div>
+                    <div class="icons-cross">
+                        <i class="far fa-times-circle"></i>
                     </div>
                 </div> 
                 <div class="post-text">
