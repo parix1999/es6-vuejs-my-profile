@@ -80,9 +80,20 @@
     align-items: center;
 }
 
-.post-details .user-pic img {
+.post-details .user-pic{
     width: 40px;
+    height: 40px;
     border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+}
+
+.post-details .user-pic img {
+    height: 100%;
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
 }
 
 .post-details .details {
