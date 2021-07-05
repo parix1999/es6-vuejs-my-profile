@@ -33,13 +33,22 @@ userDetailHtml.innerHTML = `
     <div class="user-pic"><img src="${data.myProfile.details.pic}" alt="user pic"></div>
     <div class="user-name">${data.myProfile.details.name} ${data.myProfile.details.surname} </div>
 `
-
 // in vuejs sarà: {{ myProfile.details.name }}
+function inputUtente() {
+    var inputHtml = document.getElementById('myInput').value;
+    console.log(inputHtml);
+
+    var add = data.myProfile.posts.push({
+        text:inputHtml,
+        date: '4-07-2021',
+    });
+    console.log(data.myProfile.posts);
+
+};
 
 var postListHtml = document.querySelector(".post-list")
 
 data.myProfile.posts.forEach((post) => {
-
     // prepariamo la parte interna dell'elemento html .post
     let postHtml = `
     <div class="post-details"> 
@@ -68,19 +77,9 @@ data.myProfile.posts.forEach((post) => {
     // dobbiamo inserirlo nel suo container <div class="post"></div>
     // e il tutto dentro postListHtml.innerHtml.
 
-    postListHtml.innerHTML += `<div class="post"> ${postHtml} </div>`
+    postListHtml.innerHTML += `<div class="post"> ${postHtml}</div>`;
 });
 
-function inputUtente() {
-    var inputHtml = document.getElementById('myInput').value;
-    console.log(inputHtml);
 
-    var add = data.myProfile.posts.push({
-        text:inputHtml,
-        date: '4-07-2021',
-    });
-    console.log(data.myProfile.posts);
-
-}
 
 
